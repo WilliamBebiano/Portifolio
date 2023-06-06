@@ -5,17 +5,10 @@ export const ProjectsContainner = styled.div`
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  overflow-y: hidden;
 `
 export const TextTitle = styled.p`
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${(props) => props.theme['purple-300']};
-`
-export const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme['purple-400']};
 `

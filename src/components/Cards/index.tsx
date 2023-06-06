@@ -16,7 +16,7 @@ export function Cards() {
       <CardWrapper>
         <Image src={webProject} alt="Green double couch with wooden legs" />
         <TextCard>
-          <h2>Dudas Lanches (Snack Web Site)</h2>
+          <span>Dudas Lanches (Snack Web Site)</span>
           <p>Web Application development with React </p>
         </TextCard>
       </CardWrapper>

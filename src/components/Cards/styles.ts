@@ -4,11 +4,12 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 30rem;
-  min-height: 30rem;
+  min-height: 28rem;
   border: 1px solid transparent;
   border-radius: 8px;
   box-shadow: 19px 27px 14px 0px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
+  margin: 2rem;
 
   background: ${(props) => props.theme['gray-600']};
 `
@@ -29,7 +30,7 @@ export const TextCard = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
-  h2 {
+  span {
     color: ${(props) => props.theme['purple-400']};
     text-align: center;
     line-height: normal;
@@ -38,7 +39,7 @@ export const TextCard = styled.div`
   p {
     color: ${(props) => props.theme['green-300']};
     margin-bottom: 0.5rem;
-    min-height: 5rem;
+    min-height: 4rem;
     text-align: center;
   }
 `
