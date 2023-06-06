@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
     gap: 1.5rem;
 
     a {
-      width: 3rem;
+      width: 5rem;
       height: 3rem;
       font-weight: 700;
 
