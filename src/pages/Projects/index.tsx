@@ -4,16 +4,16 @@ import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export function Projects() {
-  const handleCarouselChange = (index) => {
+  const handleCarouselChange = (index: number) => {
     console.log('Índice alterado:', index)
   }
 
-  const handleItemClick = (index, item) => {
-    console.log('Item clicado:', index, item)
+  const handleItemClick = (index: number) => {
+    console.log('Item clicado:', index)
   }
 
-  const handleThumbClick = (index, item) => {
-    console.log('Miniatura clicada:', index, item)
+  const handleThumbClick = (index: number) => {
+    console.log('Miniatura clicada:', index)
   }
 
   return (
@@ -23,8 +23,8 @@ export function Projects() {
         <Carousel
           showArrows={true}
           onChange={(index) => handleCarouselChange(index)}
-          onClickItem={(index, item) => handleItemClick(index, item)}
-          onClickThumb={(index, item) => handleThumbClick(index, item)}
+          onClickItem={(index) => handleItemClick(index)}
+          onClickThumb={(index) => handleThumbClick(index)}
           width={'70rem'}
           centerMode={true}
           centerSlidePercentage={50}

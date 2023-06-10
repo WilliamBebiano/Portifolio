@@ -1,19 +1,10 @@
 import { InstagramLogo, LinkedinLogo, GithubLogo } from 'phosphor-react'
-import williamFoto from '../../assets/William-foto.svg'
-import react from '../../assets/react.svg'
-import node from '../../assets/node.svg'
-import ts from '../../assets/ts.svg'
-import js from '../../assets/js.svg'
+import homeFoto from '../../assets/home.svg'
 
 import {
   FotoWrapper,
   HomeContainer,
-  ImageWrapper,
-  ImagemJs,
-  ImagemNode,
   ImagemPrincipal,
-  ImagemReact,
-  ImagemTS,
   SocialLink,
   TextWrapper,
   Text,
@@ -24,69 +15,7 @@ export function Home() {
   return (
     <HomeContainer>
       <FotoWrapper>
-        <ImageWrapper>
-          <ImagemPrincipal src={williamFoto} alt="" />
-        </ImageWrapper>
-        <ImagemReact
-          src={react}
-          alt="React"
-          className="icon"
-          animate={{
-            x: [-190],
-            y: [-380],
-            rotate: [0, 90, 180, 270, 360],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 5,
-            ease: 'linear',
-          }}
-        />
-        <ImagemNode
-          src={node}
-          alt="Node"
-          className="icon"
-          animate={{
-            x: [120],
-            y: [-550],
-            rotate: [0],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 5,
-            ease: 'linear',
-          }}
-        />
-        <ImagemTS
-          src={ts}
-          alt="TypeScript"
-          className="icon"
-          animate={{
-            x: [-200],
-            y: [-300],
-            rotate: [0],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 5,
-            ease: 'linear',
-          }}
-        />
-        <ImagemJs
-          src={js}
-          alt="TypeScript"
-          className="icon"
-          animate={{
-            x: [200],
-            y: [-600],
-            rotate: [0],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 5,
-            ease: 'linear',
-          }}
-        />
+        <ImagemPrincipal src={homeFoto} alt="" />
       </FotoWrapper>
       <TextWrapper>
         <h3>Hi, my name is</h3>

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
@@ -7,16 +6,20 @@ export const HomeContainer = styled.div`
   height: 85vh;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 `
 export const FotoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 9rem;
-  margin-bottom: -15rem;
-  position: relative;
-  height: 10vh;
 `
 export const ImageWrapper = styled.div`
   display: flex;
@@ -26,32 +29,16 @@ export const ImageWrapper = styled.div`
   width: 28rem;
   height: 28rem;
 
-  border-radius: 360px;
   background-color: ${(props) => props.theme['gray-700']};
   box-shadow: 20px 25px 15px -3px rgba(0, 0, 0, 0.1);
 `
-export const ImagemPrincipal = styled(motion.img)`
-  margin-top: 4.8rem;
-  width: 25rem;
-  height: 80%;
-  border-radius: 360px;
-`
-export const ImagemReact = styled(motion.img)`
-  width: 7rem;
-  padding: 0.5rem;
-  border-radius: 360px;
-`
-export const ImagemNode = styled(motion.img)`
-  width: 5rem;
-  border-radius: 360px;
-`
-export const ImagemTS = styled(motion.img)`
-  width: 8rem;
-  border-radius: 360px;
-`
-export const ImagemJs = styled(motion.img)`
-  width: 6rem;
-  border-radius: 360px;
+export const ImagemPrincipal = styled.img`
+  width: 30rem;
+
+  @media (max-width: 768px) {
+    width: 20rem;
+    margin-top: 3rem;
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -72,6 +59,22 @@ export const TextWrapper = styled.div`
     font-weight: 700;
     color: ${(props) => props.theme['purple-600']};
   }
+
+  @media (max-width: 768px) {
+    width: auto;
+    height: auto;
+
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: ${(props) => props.theme['purple-600']};
+    }
+  }
 `
 
 export const Text = styled.p`
@@ -85,6 +88,10 @@ export const Text = styled.p`
   background: ${(props) => props.theme['green-500']};
   border-radius: 8px;
   border: 1px solid ${(props) => props.theme['green-500']};
+
+  &:hover {
+    transform: scale(0.7);
+  }
 `
 
 export const SocialLink = styled.nav`
@@ -93,4 +100,10 @@ export const SocialLink = styled.nav`
   align-items: center;
   font-size: 5rem;
   color: ${(props) => props.theme['green-700']};
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 `
