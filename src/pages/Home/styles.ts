@@ -3,16 +3,18 @@ import styled from 'styled-components'
 export const HomeContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 40% 10%;
-  height: 85vh;
+  flex: 1;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    flex: 1;
+    gap: 1rem;
   }
 `
 export const FotoWrapper = styled.div`
@@ -37,7 +39,7 @@ export const ImagemPrincipal = styled.img`
 
   @media (max-width: 768px) {
     width: 20rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 `
 
@@ -61,11 +63,17 @@ export const TextWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
     height: auto;
+    margin: 2rem;
+    padding: 0.5rem;
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 1.7;
     }
 
@@ -89,8 +97,16 @@ export const Text = styled.p`
   border-radius: 8px;
   border: 1px solid ${(props) => props.theme['green-500']};
 
-  &:hover {
-    transform: scale(0.7);
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 0.5rem;
+    margin-top: 0rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
   }
 `
 
