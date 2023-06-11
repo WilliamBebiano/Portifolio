@@ -49,8 +49,10 @@ export const TextWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  width: 100%;
+  width: 28rem;
   height: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
 
   h3 {
     font-size: 2rem;
@@ -73,12 +75,12 @@ export const TextWrapper = styled.div`
     padding: 0.5rem;
 
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       line-height: 1.7;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: ${(props) => props.theme['purple-600']};
     }

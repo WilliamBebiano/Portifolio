@@ -38,19 +38,21 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex: 1;
 
     nav {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.1rem;
     }
     a {
-      width: 5rem;
+      width: 4rem;
       height: 3rem;
-      font-size: 1rem;
+      font-size: 0.875rem;
+      gap: 0.2;
     }
   }
 `
 export const ImagemLogo = styled.img`
-  width: 2.5rem;
+  width: 2rem;
   color: ${(props) => props.theme['gray-100']};
 `
