@@ -36,3 +36,7 @@ export const HeaderProjects = styled.div`
     }
   }
 `
+export const ProjectWrapperContainner = styled.div`
+  flex: 1;
+  justify-content: center;
+`

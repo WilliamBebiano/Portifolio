@@ -2,6 +2,7 @@ import { Cards } from '../../components/Cards'
 import {
   CardWrapper,
   HeaderProjects,
+  ProjectWrapperContainner,
   ProjectsContainner,
   TextTitle,
 } from './styles'
@@ -49,37 +50,39 @@ export function Projects() {
           </p>
         </div>
       </HeaderProjects>
-      <ProjectsContainner>
-        {typeof window !== 'undefined' && (
-          <Carousel
-            showArrows={true}
-            onChange={(index) => handleCarouselChange(index)}
-            onClickItem={(index) => handleItemClick(index)}
-            onClickThumb={(index) => handleThumbClick(index)}
-            width={`${windowWidth >= 780 ? '70rem' : '80vw'}`}
-            centerMode={true}
-            centerSlidePercentage={centerSlidePercentage}
-            autoPlay={true}
-            infiniteLoop={true}
-            interval={3000}
-            stopOnHover={true}
-            showThumbs={!(windowWidth >= 780)}
-            showStatus={false}
-            showIndicators={true}
-            swipeable={!(windowWidth >= 780)}
-          >
-            <CardWrapper>
-              <Cards />
-            </CardWrapper>
-            <CardWrapper>
-              <Cards />
-            </CardWrapper>
-            <CardWrapper>
-              <Cards />
-            </CardWrapper>
-          </Carousel>
-        )}
-      </ProjectsContainner>
+      <ProjectWrapperContainner>
+        <ProjectsContainner>
+          {typeof window !== 'undefined' && (
+            <Carousel
+              showArrows={true}
+              onChange={(index) => handleCarouselChange(index)}
+              onClickItem={(index) => handleItemClick(index)}
+              onClickThumb={(index) => handleThumbClick(index)}
+              width={`${windowWidth >= 780 ? '70rem' : '80vw'}`}
+              centerMode={true}
+              centerSlidePercentage={centerSlidePercentage}
+              autoPlay={true}
+              infiniteLoop={true}
+              interval={3000}
+              stopOnHover={true}
+              showThumbs={!(windowWidth >= 780)}
+              showStatus={false}
+              showIndicators={true}
+              swipeable={!(windowWidth >= 780)}
+            >
+              <CardWrapper>
+                <Cards />
+              </CardWrapper>
+              <CardWrapper>
+                <Cards />
+              </CardWrapper>
+              <CardWrapper>
+                <Cards />
+              </CardWrapper>
+            </Carousel>
+          )}
+        </ProjectsContainner>
+      </ProjectWrapperContainner>
     </>
   )
 }
