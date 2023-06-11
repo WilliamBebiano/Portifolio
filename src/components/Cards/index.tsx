@@ -11,7 +11,14 @@ import {
 } from './styles'
 import { Button } from '../Button'
 
-export function Cards(props) {
+interface CardsProps {
+  image: string
+  title: string
+  description: string
+  url: string
+}
+
+export function Cards(props: CardsProps) {
   const { image, title, description, url } = props
 
   return (

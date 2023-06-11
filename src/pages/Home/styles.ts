@@ -122,6 +122,6 @@ export const SocialLink = styled.nav`
   @media (max-width: 768px) {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    gap: 2rem;
   }
 `
