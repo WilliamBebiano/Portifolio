@@ -1,5 +1,10 @@
 import { Cards } from '../../components/Cards'
-import { CardWrapper, ProjectsContainner, TextTitle } from './styles'
+import {
+  CardWrapper,
+  HeaderProjects,
+  ProjectsContainner,
+  TextTitle,
+} from './styles'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { useEffect, useState } from 'react'
@@ -35,7 +40,15 @@ export function Projects() {
 
   return (
     <>
-      <TextTitle>Projects</TextTitle>
+      <HeaderProjects>
+        <div>
+          <TextTitle>Coffee Reacto-Fi Vibe</TextTitle>
+          <p>
+            Projects developed with the perfect blend of coffee, the relaxing
+            lo-fi atmosphere, and the power of React!
+          </p>
+        </div>
+      </HeaderProjects>
       <ProjectsContainner>
         {typeof window !== 'undefined' && (
           <Carousel
@@ -43,7 +56,7 @@ export function Projects() {
             onChange={(index) => handleCarouselChange(index)}
             onClickItem={(index) => handleItemClick(index)}
             onClickThumb={(index) => handleThumbClick(index)}
-            width={`${windowWidth >= 780 ? '70rem' : '78vw'}`}
+            width={`${windowWidth >= 780 ? '70rem' : '70vw'}`}
             centerMode={true}
             centerSlidePercentage={centerSlidePercentage}
             autoPlay={true}
