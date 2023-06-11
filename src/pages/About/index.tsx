@@ -40,7 +40,7 @@ export function About() {
             </ColorNav>
           </ButtonGitHub>
           <ButtonHireMe>
-            <ColorNav to={'/contacts'} title="Contacts">
+            <ColorNav to={'https://wa.me/491718684241'} title="Contacts">
               Hire me!
             </ColorNav>{' '}
           </ButtonHireMe>
