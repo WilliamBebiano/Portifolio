@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import webProject from '../../assets/dudasProject.svg'
+
 import {
   CardContainer,
   CardWrapper,
@@ -7,22 +7,25 @@ import {
   Footer,
   Image,
   TextCard,
+  TextTitle,
 } from './styles'
 import { Button } from '../Button'
 
-export function Cards() {
+export function Cards(props) {
+  const { image, title, description, url } = props
+
   return (
     <CardContainer>
       <CardWrapper>
-        <Image src={webProject} alt="Green double couch with wooden legs" />
+        <TextTitle>{title}</TextTitle>
+        <Image src={image} alt="Green double couch with wooden legs" />
         <TextCard>
-          <span>Dudas Lanches (Snack Web Site)</span>
-          <p>Web Application development with React </p>
+          <p>{description}</p>
         </TextCard>
       </CardWrapper>
       <Divisor />
       <Footer>
-        <NavLink to={'/'}>
+        <NavLink to={url}>
           <Button />
         </NavLink>
       </Footer>
