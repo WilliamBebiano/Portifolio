@@ -8,8 +8,8 @@ import {
   SocialLink,
   TextWrapper,
   Text,
+  StyledNavLink,
 } from './styles'
-import { NavLink } from 'react-router-dom'
 
 export function Home() {
   return (
@@ -25,24 +25,24 @@ export function Home() {
       </TextWrapper>
       <div>
         <SocialLink>
-          <NavLink
+          <StyledNavLink
             to="https://www.linkedin.com/in/william-bebiano/"
             title="LinkedIn/WilliamBebiano"
           >
             <LinkedinLogo size={60} color="#00875F" />
-          </NavLink>
-          <NavLink
+          </StyledNavLink>
+          <StyledNavLink
             to="https://github.com/WilliamBebiano"
             title="GitHub/WilliamBebiano"
           >
             <GithubLogo size={60} color="#00875F" />
-          </NavLink>
-          <NavLink
+          </StyledNavLink>
+          <StyledNavLink
             to="https://instagram.com/williambebiano?igshid=YmMyMTA2M2Y="
             title="Instagram/WilliamBebiano"
           >
             <InstagramLogo size={60} color="#00875F" />
-          </NavLink>
+          </StyledNavLink>
         </SocialLink>
       </div>
     </HomeContainer>

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
@@ -59,7 +60,7 @@ export const TextWrapper = styled.div`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
     font-weight: 700;
     color: ${(props) => props.theme['purple-600']};
   }
@@ -123,5 +124,14 @@ export const SocialLink = styled.nav`
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+  }
+`
+export const StyledNavLink = styled(NavLink)`
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    transform: scale(1.1);
+    border-bottom: 3px solid ${(props) => props.theme['purple-500']};
   }
 `

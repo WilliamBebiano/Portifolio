@@ -1,7 +1,11 @@
-import BudapestImg from '../../assets/BudapestWilliam.svg'
+import { GithubLogo } from 'phosphor-react'
+import BudapestImg from '../../assets/Will.jpeg'
 
 import {
   AboutContainner,
+  ButtonGitHub,
+  ButtonHireMe,
+  ButtonWrapper,
   Imagem,
   TextWithImageCard,
   TextWrapper,
@@ -10,32 +14,27 @@ import {
 export function About() {
   return (
     <AboutContainner>
-      <div>
-        <p>I am</p> <h1>William Bebiano</h1>
-        <p>
-          I am a Web-Developer with a background in Aeroespace and Automotive
-          Industry.
-        </p>
-      </div>
-      <TextWrapper>
-        <TextWithImageCard>
-          <p>
-            {' '}
-            and I have a Production Engineering graduate with over 10 years of
-            experience in the automotive and aerospace industries. I recently
-            relocated to Germany and currently work in logistics. However, my
-            true passion lies in web development. Since 2021, I've been studying
-            and transitioning my career to become a Web Developer. I completed a
-            FullStack Bootcamp and continue to enhance my skills through the
-            Rocket Seat Ignite program, focusing on TypeScript, React, Next.js,
-            Node.js, Elixir, and React Native. I've worked on diverse projects
-            using these technologies. Outside of work, I love traveling and have
-            visited over 14 countries. I'm dedicated to continuous learning and
-            growth as a professional. Let's connect and create innovative
-            projects together."
-          </p>
-        </TextWithImageCard>
+      <TextWithImageCard>
         <Imagem src={BudapestImg} alt="imagem" />
+      </TextWithImageCard>
+      <TextWrapper>
+        <h1>About.</h1>
+        <h2>
+          I´m a Front-End Developer based in Bad Neuenahr Ahrweiler, Germany
+        </h2>
+        <p>
+          Since 2021, I've been on a mission to transform myself into a
+          Front-End Developer extraordinaire. I even survived a FullStack
+          Bootcamp DevClub and I'm now hooked on the Rocket Seat Ignite program,
+          geeking out over TypeScript, React, Next.js, Node.js, Elixir, and
+          React Native.
+        </p>
+        <ButtonWrapper>
+          <ButtonGitHub>
+            See my Code <GithubLogo size={24} />
+          </ButtonGitHub>
+          <ButtonHireMe>Hire me</ButtonHireMe>
+        </ButtonWrapper>
       </TextWrapper>
     </AboutContainner>
   )
