@@ -38,7 +38,6 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex: 1;
 
     nav {
       display: flex;

@@ -6,6 +6,7 @@ import {
   ButtonGitHub,
   ButtonHireMe,
   ButtonWrapper,
+  ColorNav,
   Imagem,
   TextWithImageCard,
   TextWrapper,
@@ -31,9 +32,18 @@ export function About() {
         </p>
         <ButtonWrapper>
           <ButtonGitHub>
-            See my Code <GithubLogo size={24} />
+            <ColorNav
+              to="https://github.com/WilliamBebiano"
+              title="GitHub/WilliamBebiano"
+            >
+              See my Code <GithubLogo size={24} />
+            </ColorNav>
           </ButtonGitHub>
-          <ButtonHireMe>Hire me</ButtonHireMe>
+          <ButtonHireMe>
+            <ColorNav to={'/contacts'} title="Contacts">
+              Hire me!
+            </ColorNav>{' '}
+          </ButtonHireMe>
         </ButtonWrapper>
       </TextWrapper>
     </AboutContainner>
