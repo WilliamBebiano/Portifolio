@@ -108,7 +108,7 @@ export const Text = styled.p`
     margin-top: 0rem;
     font-size: 1.4rem;
     font-weight: 700;
-    width: 100%;
+    width: 23rem;
   }
 `
 
