@@ -12,11 +12,23 @@ export const CardContainer = styled.div`
   margin: 2rem;
 
   background: ${(props) => props.theme['gray-600']};
+
+  @media (max-width: 768px) {
+    flex: 1;
+    gap: 1rem;
+    width: 18rem;
+    margin: 2rem;
+  }
 `
 
 export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex: 1;
+  }
 `
 
 export const Image = styled.img`
@@ -24,6 +36,10 @@ export const Image = styled.img`
   max-height: 16rem;
   border-radius: 8px;
   margin: 1rem;
+
+  @media (max-width: 768px) {
+    flex: 1;
+  }
 `
 export const TextCard = styled.div`
   display: flex;
@@ -41,6 +57,10 @@ export const TextCard = styled.div`
     margin-bottom: 0.5rem;
     min-height: 4rem;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
   }
 `
 export const Footer = styled.footer`
@@ -60,4 +80,10 @@ export const Divisor = styled.hr`
   border-left: transparent;
   border-right: transparent;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    flex: 1;
+    width: 16rem;
+    margin: auto;
+  }
 `

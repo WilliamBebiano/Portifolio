@@ -23,4 +23,8 @@ export const ButtonContainer = styled.button`
   &:active {
     background-color: ${(props) => props.theme['green-700']};
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `
