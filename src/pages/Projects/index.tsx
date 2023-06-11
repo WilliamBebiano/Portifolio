@@ -56,7 +56,7 @@ export function Projects() {
             onChange={(index) => handleCarouselChange(index)}
             onClickItem={(index) => handleItemClick(index)}
             onClickThumb={(index) => handleThumbClick(index)}
-            width={`${windowWidth >= 780 ? '70rem' : '70vw'}`}
+            width={`${windowWidth >= 780 ? '70rem' : '80vw'}`}
             centerMode={true}
             centerSlidePercentage={centerSlidePercentage}
             autoPlay={true}
