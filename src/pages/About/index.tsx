@@ -1,4 +1,4 @@
-import { GithubLogo } from 'phosphor-react'
+import { GithubLogo, WhatsappLogo } from 'phosphor-react'
 import BudapestImg from '../../assets/Will.jpeg'
 
 import {
@@ -36,7 +36,7 @@ export function About() {
             Rocket Seat
           </BootcampLink>{' '}
           Ignite program, geeking out over TypeScript, React, Next.js, Node.js,
-          Elixir, and React Native.
+          Elixir, and React Native. This is your chance to Hire me!
         </p>
         <ButtonWrapper>
           <ButtonGitHub>
@@ -49,6 +49,7 @@ export function About() {
           </ButtonGitHub>
           <ButtonHireMe>
             <ColorNav to={'https://bit.ly/3J955Cr'} title="Contacts">
+              <WhatsappLogo size={24} />
               Hire me!
             </ColorNav>{' '}
           </ButtonHireMe>
