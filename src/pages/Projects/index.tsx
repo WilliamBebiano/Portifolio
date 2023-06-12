@@ -2,11 +2,11 @@ import { Cards } from '../../components/Cards'
 import {
   CardWrapper,
   HeaderProjects,
-  ProjectWrapperContainner,
   ProjectsContainner,
   TextTitle,
 } from './styles'
-import { Carousel } from 'react-responsive-carousel'
+
+import styles from './styles.module.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { useEffect, useState } from 'react'
 
@@ -15,6 +15,7 @@ import TodoImagem from '../../assets/Todo.svg'
 import NlwSpace from '../../assets/NLWSpaceTime.svg'
 import Timer from '../../assets/Timer.svg'
 import Feed from '../../assets/Feed.svg'
+import { Carousel } from 'react-responsive-carousel'
 
 export function Projects() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -51,7 +52,7 @@ export function Projects() {
       title: 'Dudas Lanches (Snack Web Site)',
       description:
         'Dudas Lanches is a full-stack Snack Web Site built with React and Node. It offers a seamless user experience for browsing and ordering delicious snacks. With its robust backend and responsive frontend, Dudas Lanches provides a delightful online snack ordering experience.',
-      url: '#',
+      url: 'https://github.com/WilliamBebiano/dudas-lanches-interface',
     },
     {
       image: Feed,
@@ -72,14 +73,14 @@ export function Projects() {
       title: 'NLW Space Time',
       description:
         'Was an amazing learning experience, covering technologies like Next.js, React, React Native, and Node.js. The event provided an opportunity to explore building web, mobile, and server applications with these powerful tools.',
-      url: '#',
+      url: 'https://github.com/WilliamBebiano/nlw-web',
     },
     {
       image: Timer,
       title: 'Timer',
       description:
         'The Timer project is a Pomodoro-style application that allows users to manage their activities and track ongoing, completed, and paused tasks. It provides an efficient way to stay organized and focused on productivity.',
-      url: '#',
+      url: 'https://ignite-timer-seven-green.vercel.app/',
     },
   ]
   return (
@@ -93,40 +94,37 @@ export function Projects() {
           </p>
         </div>
       </HeaderProjects>
-      <ProjectWrapperContainner>
-        <ProjectsContainner>
-          {typeof window !== 'undefined' && (
-            <Carousel
-              showArrows={true}
-              onChange={(index) => handleCarouselChange(index)}
-              onClickItem={(index) => handleItemClick(index)}
-              onClickThumb={(index) => handleThumbClick(index)}
-              width={`${windowWidth >= 780 ? '70rem' : '80vw'}`}
-              centerMode={true}
-              centerSlidePercentage={centerSlidePercentage}
-              autoPlay={true}
-              infiniteLoop={true}
-              interval={3000}
-              stopOnHover={true}
-              showThumbs={!(windowWidth >= 780)}
-              showStatus={false}
-              showIndicators={true}
-              swipeable={!(windowWidth >= 780)}
-            >
-              {CardShow.map((card, index) => (
-                <CardWrapper key={index}>
-                  <Cards
-                    image={card.image}
-                    title={card.title}
-                    description={card.description}
-                    url={card.url}
-                  />
-                </CardWrapper>
-              ))}
-            </Carousel>
-          )}
-        </ProjectsContainner>
-      </ProjectWrapperContainner>
+
+      <ProjectsContainner>
+        {typeof window !== 'undefined' && (
+          <Carousel
+            className={styles.carousel}
+            showArrows={true}
+            onChange={(index) => handleCarouselChange(index)}
+            onClickItem={(index) => handleItemClick(index)}
+            onClickThumb={(index) => handleThumbClick(index)}
+            width={`${windowWidth >= 780 ? '70rem' : '80vw'}`}
+            centerMode={true}
+            centerSlidePercentage={centerSlidePercentage}
+            stopOnHover={true}
+            showThumbs={!(windowWidth >= 780)}
+            showStatus={false}
+            showIndicators={true}
+            swipeable={!(windowWidth >= 780)}
+          >
+            {CardShow.map((card, index) => (
+              <CardWrapper key={index}>
+                <Cards
+                  image={card.image}
+                  title={card.title}
+                  description={card.description}
+                  url={card.url}
+                />
+              </CardWrapper>
+            ))}
+          </Carousel>
+        )}
+      </ProjectsContainner>
     </>
   )
 }

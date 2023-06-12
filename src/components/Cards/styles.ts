@@ -19,10 +19,12 @@ export const CardContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex: 1;
+    display: block;
+    position: relative;
     gap: 1rem;
     width: 18rem;
-    margin: 2rem;
+    height: 80%;
+    margin: 1rem;
   }
 `
 

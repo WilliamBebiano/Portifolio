@@ -3,6 +3,7 @@ import BudapestImg from '../../assets/Will.jpeg'
 
 import {
   AboutContainner,
+  BootcampLink,
   ButtonGitHub,
   ButtonHireMe,
   ButtonWrapper,
@@ -26,9 +27,16 @@ export function About() {
         <p>
           Since 2021, I've been on a mission to transform myself into a
           Front-End Developer extraordinaire. I even survived a FullStack
-          Bootcamp DevClub and I'm now hooked on the Rocket Seat Ignite program,
-          geeking out over TypeScript, React, Next.js, Node.js, Elixir, and
-          React Native.
+          Bootcamp{' '}
+          <BootcampLink to={'https://rodolfomori.com.br/devclub-n1/'}>
+            DevClub
+          </BootcampLink>{' '}
+          and I'm now hooked on the{' '}
+          <BootcampLink to={'https://www.rocketseat.com.br/'}>
+            Rocket Seat
+          </BootcampLink>{' '}
+          Ignite program, geeking out over TypeScript, React, Next.js, Node.js,
+          Elixir, and React Native.
         </p>
         <ButtonWrapper>
           <ButtonGitHub>
@@ -40,7 +48,7 @@ export function About() {
             </ColorNav>
           </ButtonGitHub>
           <ButtonHireMe>
-            <ColorNav to={'https://wa.me/491718684241'} title="Contacts">
+            <ColorNav to={'https://bit.ly/3J955Cr'} title="Contacts">
               Hire me!
             </ColorNav>{' '}
           </ButtonHireMe>

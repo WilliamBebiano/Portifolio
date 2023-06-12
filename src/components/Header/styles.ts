@@ -37,7 +37,7 @@ export const HeaderContainer = styled.header`
   @media (max-width: 768px) {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     nav {
       display: flex;

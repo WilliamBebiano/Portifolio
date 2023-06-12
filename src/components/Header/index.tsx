@@ -16,9 +16,6 @@ export function Header() {
         <NavLink to={'/about'} title="About me">
           About me
         </NavLink>
-        <NavLink to={'/contacts'} title="Contacts">
-          Contact
-        </NavLink>
       </nav>
     </HeaderContainer>
   )
