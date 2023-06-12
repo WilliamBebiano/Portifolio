@@ -23,7 +23,7 @@ export const CardContainer = styled.div`
     position: relative;
     gap: 1rem;
     width: 18rem;
-    height: 80%;
+    height: 35rem;
     margin: 1rem;
   }
 `
@@ -45,7 +45,6 @@ export const Image = styled.img`
   margin: 1rem;
 
   @media (max-width: 768px) {
-    flex: 1;
   }
 `
 export const TextTitle = styled.h1`
@@ -77,11 +76,16 @@ export const TextCard = styled.div`
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
+    height: 10rem;
   }
 `
 export const Footer = styled.footer`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    height: 4rem;
+  }
 `
 
 export const Divisor = styled.hr`

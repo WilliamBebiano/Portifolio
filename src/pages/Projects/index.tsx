@@ -109,7 +109,7 @@ export function Projects() {
             stopOnHover={true}
             showThumbs={!(windowWidth >= 780)}
             showStatus={false}
-            showIndicators={true}
+            showIndicators={false}
             swipeable={!(windowWidth >= 780)}
           >
             {CardShow.map((card, index) => (
